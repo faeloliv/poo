@@ -63,10 +63,10 @@ public class CarrinhoCompra {
     @Override
     public String toString() {
         return "\n===== CARRINHO DE COMPRA =====\n" +
-                "ID: " + id + "\n" +
-                "Data: " + data + "\n" +
+                "ID: " + getId() + "\n" +
+                "Data: " + getData() + "\n" +
                 "\n--- Cliente ---\n" +
-                cliente + "\n" +
+                getCliente() + "\n" +
                 itensCarrinho;
     }
 }

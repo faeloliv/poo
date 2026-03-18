@@ -8,10 +8,10 @@ public class Drone {
     }
 
     public Drone(String codigo, float altura, int bateria, boolean emVoo) {
-        setCodigo(codigo);
-        setAltura(altura);
-        setBateria(bateria);
-        setEmVoo(emVoo);
+        this.setCodigo(codigo);
+        this.setAltura(altura);
+        this.setBateria(bateria);
+        this.setEmVoo(emVoo);
     }
 
     public String getCodigo() {

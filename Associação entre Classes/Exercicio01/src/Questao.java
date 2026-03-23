@@ -38,7 +38,7 @@ public class Questao {
 
     @Override
     public String toString() {
-        return String.format ("\n--- QUESTÃO NÚMERO %s ---\n◉ Enunciado: %s\nValor: %s\n",
+        return String.format("\n--- QUESTÃO NÚMERO %s ---\n◉ Enunciado: %s\nValor: %s\n",
                 getNumero(), getEnunciado(), getValor());
     }
 }

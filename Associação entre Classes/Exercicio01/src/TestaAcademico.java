@@ -5,19 +5,20 @@ public class TestaAcademico {
 
         Disciplina disc1 = new Disciplina(1, "Programação orientada a objeto", "Daniel");
 
-        // AGREGAÇÃO
+        // AGREGAÇÃO - MATRICULAR ALUNOS
         disc1.matricularAluno(aluno1);
         disc1.matricularAluno(aluno2);
 
-        // COMPOSIÇÃO
+        // COMPOSIÇÃO - CRIAR AVALIAÇÃO
         disc1.criarAvaliacao(1, "Prova Semestral");
 
-        // COMPOSIÇÃO ANINHADA
+        // COMPOSIÇÃO ANINHADA - ADICIONAR QUESTÕES A AVALIAÇÃO CRIADA
         Avaliacao av = disc1.getAvaliacoes().get(0);
-
-        av.adicionarQuestao(1, "O que é POO?", 2.0f);
-        av.adicionarQuestao(2, "Explique herança", 3.0f);
-        av.adicionarQuestao(3, "Explique polimorfismo", 5.0f);
+        if (av != null) {
+            av.adicionarQuestao(1, "O que é POO?", 2.0f);
+            av.adicionarQuestao(2, "Explique herança", 3.0f);
+            av.adicionarQuestao(3, "Explique polimorfismo", 5.0f);
+        }
 
         // Impressão final
         System.out.println(disc1);

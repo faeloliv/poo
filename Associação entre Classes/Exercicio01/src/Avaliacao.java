@@ -34,16 +34,15 @@ public class Avaliacao {
     }
 
     public Avaliacao(int id, String nome) {
-        this.id = id;
-        this.nome = nome;
+        this.setId(id);
+        this.setNome(nome);
         this.questoes = new ArrayList<>();
     }
 
     // Adicionar questões na avaliação
     // Composição - Questões dependem da avaliação para serem criadas
     public void adicionarQuestao(int num, String texto, float peso) {
-        Questao aux = new Questao(num, texto, peso);
-        this.questoes.add(aux);
+        this.questoes.add(new Questao(num, texto, peso));
     }
 
     @Override

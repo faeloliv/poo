@@ -57,18 +57,17 @@ public class Disciplina {
         this.avaliacoes = avaliacoes;
     }
 
-    // AGREGAÇÃO
+    // AGREGAÇÃO - RECEBE O ALUNO QUE JÁ EXISTE FORA
     public void matricularAluno(Aluno a) {
         this.alunos.add(a);
     }
 
-    // COMPOSIÇÃO
+    // COMPOSIÇÃO - CRIA A AVALIAÇÃO DENTRO DA DISCIPLINA
     public void criarAvaliacao(int id, String nome) {
-        Avaliacao av = new Avaliacao(id, nome);
-        this.avaliacoes.add(av);
+        this.avaliacoes.add(new Avaliacao(id, nome));
     }
 
-    @Override
+    @Override // Anulando um metodo herdado
     public String toString() {
         return String.format("\nId Disciplina: %s\nNome: %s\nProfessor: %s\n\nAlunos: %s\n\nAvaliações =%s",
                 getId(), getNome(), getProfessor(), getAlunos(), getAvaliacoes());

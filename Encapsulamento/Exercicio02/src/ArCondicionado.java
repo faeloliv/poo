@@ -56,7 +56,7 @@ public class ArCondicionado {
         this.ligado = ligado;
         if (this.ligado) {
             System.out.printf("\nAr condicionado '%s - %s' ligado!", getMarca(), getModelo());
-        }else {
+        } else {
             System.out.printf("\nAr condicionado '%s - %s' encontra-se desligado.", getMarca(), getModelo());
         }
     }
@@ -74,9 +74,11 @@ public class ArCondicionado {
     }
 
     public void ativarModoTurbo() {
-        if (verificarCompressor()) {
+        if (verificarCompressor() && this.ligado) {
             setTemperatura(16);
             System.out.println("❄️ MODO TURBO ATIVADO!");
+        } else if (!this.ligado) {
+            System.out.println("NÃO FOI POSSÍVEL ATIVAR O MODO TURBO\nO ar condicionado encontra-se desligado.");
         } else {
             System.out.println("NÃO FOI POSSÍVEL ATIVAR O MODO TURBO");
         }

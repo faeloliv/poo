@@ -1,4 +1,4 @@
-public class Veiculo {
+public abstract class Veiculo {
     protected String marca, modelo;
     protected float velocidade;
 
@@ -35,13 +35,9 @@ public class Veiculo {
         this.velocidade = velocidade;
     }
 
-    public void mover() {
-        System.out.println("\nVeículo se movendo...");
-    }
+    public abstract void mover();
 
-    public void abastecer() {
-        System.out.println("\nVeículo reabastecendo...");
-    }
+    public abstract void abastecer();
 
     @Override
     public String toString() {

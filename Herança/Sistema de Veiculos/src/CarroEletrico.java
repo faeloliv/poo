@@ -25,12 +25,12 @@ public class CarroEletrico extends Veiculo {
 
     @Override
     public void abastecer() {
-        System.out.println("\nRecarregando bateria em posto de carga rápida...\n");
+        System.out.println("Recarregando bateria em posto de carga rápida...\n");
     }
 
     @Override
     public String toString() {
-        return "\n| Carro Elétrico |" +
+        return "| Carro Elétrico |" +
                 super.toString() +
                 "\nAutonomia Bateria: " + getAutonomiaBateria() + "%";
     }

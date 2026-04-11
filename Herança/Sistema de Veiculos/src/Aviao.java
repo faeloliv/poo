@@ -30,7 +30,7 @@ public class Aviao extends Veiculo {
 
     @Override
     public String toString() {
-        return "\n| Avião |" +
+        return "| Avião |" +
                 super.toString() +
                 "\nAltitude máxima: " + getAltitudeMax() + "m";
     }

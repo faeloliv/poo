@@ -17,11 +17,11 @@ public class EmpresaLogistica {
     }
 
     public void gerarRelatorioCustos(double distancia) {
-        System.out.println("\n=====| RELATÓRIO DE CUSTOS DA VIAGEM (" + distancia + "KM) |=====");
+        System.out.printf("\n=====| RELATÓRIO DE CUSTOS DA VIAGEM (%.2fKM) |=====", distancia);
         for (Veiculo veiculo : frota) {
             double custo = veiculo.calcularCustoViagem(distancia);
             System.out.println(veiculo);
-            System.out.println("Custo da viagem: R$" + custo);
+            System.out.printf("Custo da viagem: R$%.2f%n", custo);
         }
     }
 }

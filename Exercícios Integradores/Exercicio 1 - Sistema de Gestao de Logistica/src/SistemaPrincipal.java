@@ -8,6 +8,11 @@ public class SistemaPrincipal {
         Van v1 = new Van("XYZ6789", 1200, false);
         Van v2 = new Van("ZYX9876", 950, true);
 
+        truck1.exibirDados();
+        truck2.exibirDados();
+        v1.exibirDados();
+        v2.exibirDados();
+
         emp1.adicionarVeiculo(truck1);
         emp1.adicionarVeiculo(truck2);
         emp1.adicionarVeiculo(v1);
